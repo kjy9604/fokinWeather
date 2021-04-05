@@ -14,6 +14,7 @@
 		68A95FB362A017270FB2E23D /* libPods-fokinWeather-fokinWeatherTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8569DC43F573655015A567F /* libPods-fokinWeather-fokinWeatherTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		C3FAC25DAFC796A1CB20D22F /* libPods-fokinWeather.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ED657973F6A8F4D95AF440D /* libPods-fokinWeather.a */; };
+		F15C002E261AA4A400E757FC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15C002D261AA4A400E757FC /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		9B306EFA923CF9B83F816F42 /* Pods-fokinWeather-fokinWeatherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fokinWeather-fokinWeatherTests.debug.xcconfig"; path = "Target Support Files/Pods-fokinWeather-fokinWeatherTests/Pods-fokinWeather-fokinWeatherTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C8569DC43F573655015A567F /* libPods-fokinWeather-fokinWeatherTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fokinWeather-fokinWeatherTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F15C002C261AA4A400E757FC /* fokinWeather-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fokinWeather-Bridging-Header.h"; sourceTree = "<group>"; };
+		F15C002D261AA4A400E757FC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		F68690993BA821F8B6B04D0A /* Pods-fokinWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fokinWeather.release.xcconfig"; path = "Target Support Files/Pods-fokinWeather/Pods-fokinWeather.release.xcconfig"; sourceTree = "<group>"; };
 		FA83017BCC6FDCCA8B6B4101 /* Pods-fokinWeather-fokinWeatherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fokinWeather-fokinWeatherTests.release.xcconfig"; path = "Target Support Files/Pods-fokinWeather-fokinWeatherTests/Pods-fokinWeather-fokinWeatherTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +95,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				F15C002D261AA4A400E757FC /* File.swift */,
+				F15C002C261AA4A400E757FC /* fokinWeather-Bridging-Header.h */,
 			);
 			name = fokinWeather;
 			sourceTree = "<group>";
@@ -145,7 +150,6 @@
 				9B306EFA923CF9B83F816F42 /* Pods-fokinWeather-fokinWeatherTests.debug.xcconfig */,
 				FA83017BCC6FDCCA8B6B4101 /* Pods-fokinWeather-fokinWeatherTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +212,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -412,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				F15C002E261AA4A400E757FC /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9B306EFA923CF9B83F816F42 /* Pods-fokinWeather-fokinWeatherTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -458,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA83017BCC6FDCCA8B6B4101 /* Pods-fokinWeather-fokinWeatherTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = fokinWeatherTests/Info.plist;
@@ -498,6 +505,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = fokinWeather;
+				SWIFT_OBJC_BRIDGING_HEADER = "fokinWeather-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -523,6 +531,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = fokinWeather;
+				SWIFT_OBJC_BRIDGING_HEADER = "fokinWeather-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
